@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { nav, studio } from "@/content/studio";
 import { Icon } from "@/components/ui/Icon";
+import { Logo } from "@/components/ui/Logo";
+
+const social =
+  "grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-gold";
 
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-void">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-4 md:px-10">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4 md:px-10 md:py-16">
         <div className="md:col-span-2">
-          <img src="/brand/logo.png" alt={studio.name} className="logo-blend mb-6 h-16 w-auto" />
-          <p className="max-w-sm text-sm leading-relaxed text-white/60">{studio.tagline}. Film, television, and sound for a global audience.</p>
+          <Logo size="footer" />
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">{studio.tagline}. Film, television, and sound for a global audience.</p>
         </div>
         <div>
           <p className="kicker mb-4">Navigate</p>
@@ -33,13 +37,22 @@ export function Footer() {
             Crafting authentic African stories with international partners, festival ambition, and cinema-grade finish.
           </p>
           <div className="mt-6 flex gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70">
+            <a
+              href="https://kick.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Kick"
+              className={social}
+            >
+              <Icon name="kick" size={15} />
+            </a>
+            <span className={social}>
               <Icon name="instagram" size={15} />
             </span>
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70">
+            <span className={social}>
               <Icon name="youtube" size={15} />
             </span>
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70">
+            <span className={social}>
               <Icon name="linkedin" size={15} />
             </span>
           </div>

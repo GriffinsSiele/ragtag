@@ -18,7 +18,7 @@ export function Preloader() {
 
   return (
     <div className="preloader" aria-hidden>
-      <img src="/brand/logo.png" alt="" />
+      <img src="/brand/logo-mark.png" alt="" />
     </div>
   );
 }

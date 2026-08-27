@@ -59,8 +59,69 @@ body {
   border-radius: 999px;
 }
 
-.logo-blend {
+.logo-mark {
   mix-blend-mode: screen;
+  display: block;
+  transition: filter 400ms var(--ease-luxe);
+}
+
+.logo-mark:hover {
+  animation: logo-glitch 0.55s steps(2, end);
+}
+
+@keyframes logo-glitch {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    filter: none;
+  }
+  18% {
+    transform: translate3d(-2px, 0, 0);
+    filter: drop-shadow(2px 0 #c9a36a);
+  }
+  36% {
+    transform: translate3d(2px, 0, 0);
+    filter: drop-shadow(-2px 0 #fff);
+  }
+  54% {
+    transform: translate3d(-1px, 0, 0);
+  }
+}
+
+.hero-rise {
+  animation: rise 1.05s var(--ease-luxe) both;
+}
+
+.hero-rise-2 {
+  animation-delay: 140ms;
+}
+
+.hero-rise-3 {
+  animation-delay: 280ms;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.95s var(--ease-luxe),
+    transform 0.95s var(--ease-luxe);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
 }
 
 .hero-ken {
@@ -75,19 +136,6 @@ body {
   to {
     transform: scale(1.12) translate3d(1.4%, -1.2%, 0);
   }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition:
-    opacity 1s var(--ease-luxe),
-    transform 1s var(--ease-luxe);
-}
-
-.reveal.is-in {
-  opacity: 1;
-  transform: none;
 }
 
 .delay-1 {
@@ -137,7 +185,7 @@ body {
 }
 
 .preloader img {
-  width: min(280px, 62vw);
+  width: min(320px, 72vw);
   mix-blend-mode: screen;
   animation: logo-in 1.2s var(--ease-luxe) both;
 }
@@ -169,14 +217,36 @@ body {
   backdrop-filter: blur(22px);
 }
 
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 0;
+  background: var(--color-gold);
+  transition: width 320ms var(--ease-luxe);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
 .btn-gold {
   background: var(--color-gold);
   color: var(--color-ink);
-  transition: background 200ms ease, transform 200ms ease;
+  transition: background 220ms ease, transform 220ms var(--ease-luxe), box-shadow 220ms ease;
 }
 
 .btn-gold:hover {
   background: var(--color-gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(201, 163, 106, 0.28);
 }
 
 .card-lux {
@@ -215,7 +285,11 @@ select:focus {
   .marquee-track,
   .preloader,
   .preloader img,
-  .reveal {
+  .reveal,
+  .hero-rise,
+  .hero-rise-2,
+  .hero-rise-3,
+  .logo-mark:hover {
     animation: none !important;
     opacity: 1;
     transform: none;

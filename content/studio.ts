@@ -55,11 +55,11 @@ export const services = [
     icon: "edit-3" as const,
     image: "/media/script.jpg",
     summary:
-      "From first spark to a production-ready bible: positioning, world, and a story that can travel.",
+      "From first spark to a production-ready story document: positioning, world, and a story that can travel.",
     points: [
       "Story architecture",
       "Audience and market framing",
-      "Series and feature bibles",
+      "Series and feature documents",
       "Treatment development",
     ],
   },

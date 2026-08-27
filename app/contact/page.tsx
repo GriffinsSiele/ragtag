@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero image="/media/crowd.jpg" title="Start a project" kicker="Brief the studio" />
-      <section className="mx-auto grid max-w-6xl gap-16 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:px-12">
+      <section className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:px-12 md:py-20">
         <div>
           <p className="kicker">Commission</p>
           <h2 className="display mt-4 text-4xl md:text-5xl">Tell us the story.</h2>

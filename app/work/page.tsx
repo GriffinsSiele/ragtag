@@ -3,6 +3,7 @@ import Link from "next/link";
 import { work } from "@/content/studio";
 import { CinematicImage } from "@/components/ui/CinematicImage";
 import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = { title: "Work" };
 
@@ -10,14 +11,15 @@ export default function WorkPage() {
   return (
     <>
       <PageHero image="/media/set.jpg" title="Work" kicker="Features, shorts, television, sound" />
-      <section className="px-6 py-20 md:px-12">
+      <section className="px-6 py-16 md:px-12 md:py-20">
         <p className="mx-auto max-w-2xl text-center text-white/65">
           A new slate is in motion. These frames describe the studio language we bring to forthcoming features,
           shorts, television, and sound.
         </p>
-        <div className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-2">
-          {work.map((item) => (
-            <Link key={item.slug} href={`/work/${item.slug}`} className="work-card group">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2">
+          {work.map((item, i) => (
+            <Reveal key={item.slug} delay={(Math.min(i, 3) || 0) as 0 | 1 | 2 | 3}>
+            <Link href={`/work/${item.slug}`} className="work-card group">
               <div className="relative aspect-[16/10] overflow-hidden rounded-[28px]">
                 <CinematicImage src={item.image} alt={item.title} className="img" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
@@ -29,6 +31,7 @@ export default function WorkPage() {
                 </div>
               </div>
             </Link>
+            </Reveal>
           ))}
         </div>
       </section>

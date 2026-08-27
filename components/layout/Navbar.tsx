@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav } from "@/content/studio";
 import { Icon } from "@/components/ui/Icon";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -31,22 +32,22 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4 md:px-6">
+      <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 md:px-6">
         <nav
-          className={`nav-shell pill flex h-14 w-full max-w-[1120px] items-center justify-between gap-4 px-2 pl-4 md:h-[52px] ${
+          className={`nav-shell pill flex h-14 w-full max-w-[1120px] items-center justify-between gap-4 px-2 pl-4 md:h-14 ${
             scrolled ? "bg-black/78" : ""
           }`}
         >
           <Link href="/" className="flex items-center" aria-label="Ragtag Studios home">
-            <img src="/brand/logo.png" alt="Ragtag Studios" className="logo-blend h-9 w-auto md:h-10" />
+            <Logo />
           </Link>
           <div className="hidden items-center gap-8 md:flex">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                  pathname === item.href ? "text-gold" : "text-white/80 hover:text-white"
+                className={`nav-link font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
+                  pathname === item.href ? "is-active text-gold" : "text-white/80 hover:text-white"
                 }`}
               >
                 {item.label}

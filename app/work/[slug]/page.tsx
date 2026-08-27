@@ -24,23 +24,25 @@ export default async function WorkDetailPage({ params }: Props) {
 
   return (
     <>
-      <section className="relative h-[72vh] min-h-[480px] overflow-hidden">
-        <CinematicImage src={item.image} alt={item.title} ken priority />
-        <div className="vignette absolute inset-0" />
-        <div className="absolute inset-x-0 bottom-0 px-6 pb-14 md:px-12">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <CinematicImage src={item.image} alt={item.title} ken priority />
+          <div className="vignette absolute inset-0" />
+        </div>
+        <div className="relative px-6 pb-16 pt-24 md:px-12 md:pb-20 md:pt-[6.5rem]">
           <p className="kicker">
             {item.type} · {item.year}
           </p>
-          <h1 className="display mt-4 text-5xl md:text-7xl">{item.title}</h1>
+          <h1 className="display mt-2 text-4xl md:text-6xl">{item.title}</h1>
         </div>
       </section>
-      <section className="mx-auto max-w-3xl px-6 py-20">
+      <section className="mx-auto max-w-3xl px-6 py-16 md:py-20">
         <p className="text-xl leading-relaxed text-white/75 md:text-2xl">{item.logline}</p>
-        <p className="mt-8 text-white/55">
+        <p className="mt-5 text-white/55">
           This chapter of the slate is in development. Commission the studio to shape a feature, short, series, or
           sound world with the same standard of finish.
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-wrap gap-4">
           <Button href="/contact">
             Start a project
             <Icon name="arrow-right" size={14} />
