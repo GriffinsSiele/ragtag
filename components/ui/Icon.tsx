@@ -37,6 +37,26 @@ function KickMark({ size = 20, className }: { size?: number; className?: string 
   );
 }
 
+function WardrobeMark({ size = 20, className }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M12 3.5a2 2 0 0 1 2 2v1.2L20 10.5v1.5H4v-1.5L10 6.7V5.5a2 2 0 0 1 2-2z" />
+      <path d="M7 12v8.5M17 12v8.5" />
+    </svg>
+  );
+}
+
 const icons = {
   "arrow-right": ArrowRight,
   "arrow-up-right": ArrowUpRight,
@@ -56,6 +76,7 @@ const icons = {
   "share-2": Share2,
   users: Users,
   video: Video,
+  wardrobe: WardrobeMark,
   "volume-2": Volume2,
   x: X,
   youtube: Youtube,
@@ -75,6 +96,9 @@ export function Icon({
 }) {
   if (name === "kick") {
     return <KickMark size={size} className={className} />;
+  }
+  if (name === "wardrobe") {
+    return <WardrobeMark size={size} className={className} />;
   }
   const Cmp = icons[name];
   return <Cmp size={size} strokeWidth={1.5} className={className} aria-hidden />;

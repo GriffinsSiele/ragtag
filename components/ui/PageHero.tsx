@@ -10,14 +10,14 @@ export function PageHero({
   kicker: string;
 }) {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative flex min-h-[52vh] overflow-hidden md:min-h-[58vh]">
       <div className="absolute inset-0">
         <CinematicImage src={image} alt="" ken priority />
         <div className="vignette absolute inset-0" />
       </div>
-      <div className="relative px-6 pb-16 pt-24 md:px-12 md:pb-20 md:pt-[6.5rem] lg:px-16">
-        <p className="kicker hero-rise mb-3">{kicker}</p>
-        <h1 className="hero-rise hero-rise-2 display max-w-4xl text-4xl text-white md:text-6xl">{title}</h1>
+      <div className="relative mt-auto w-full px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:px-16">
+        <p className="kicker hero-rise mb-4">{kicker}</p>
+        <h1 className="hero-rise hero-rise-2 display max-w-4xl text-5xl text-white md:text-7xl">{title}</h1>
       </div>
     </section>
   );

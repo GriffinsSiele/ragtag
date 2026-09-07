@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Fraunces, Inter, Space_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { Preloader } from "@/components/layout/Preloader";
@@ -18,13 +18,19 @@ const space = Space_Mono({
   display: "swap",
 });
 
+const display = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Ragtag Studios | Crafting stories for a global audience",
     template: "%s | Ragtag Studios",
   },
   description:
-    "Ragtag Studios is a film and sound production company creating high-quality work that celebrates diverse African stories for film, television, and digital media.",
+    "Ragtag Studios is a film and sound production company creating high-quality work that celebrates diverse stories for film, television, and digital media.",
   icons: {
     icon: "/brand/favicon-32.png",
     apple: "/brand/apple-touch-icon.png",
@@ -33,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${space.variable}`}>
+    <html lang="en" className={`${inter.variable} ${space.variable} ${display.variable}`}>
       <body className="min-h-dvh bg-void font-sans text-paper">
         <div className="grain" />
         <Preloader />

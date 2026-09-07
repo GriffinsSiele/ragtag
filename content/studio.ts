@@ -1,51 +1,52 @@
 export const studio = {
   name: "Ragtag Studios",
   tagline: "Crafting stories for a global audience",
-  kicker: "Film and sound production",
+  kicker: "Film and sound",
   blurb:
-    "Ragtag Studios is a film and sound production company committed to producing high-quality content that celebrates diverse stories and culture. We specialize in creating compelling visual and auditory experiences for film, television, and digital media. Our team comprises experienced professionals passionate about storytelling and dedicated to delivering exceptional results.",
-  mission:
-    "To empower African storytellers, promote cultural exchange, and create impactful content that resonates with global audiences, fostering community development and cultural growth through film and sound.",
-  vision:
-    "To be a leading global production house recognized for producing innovative, authentic stories that inspire, entertain, and connect people worldwide.",
-  close:
-    "At Ragtag Studios, we believe in the power of storytelling to connect, inspire, and entertain. We are committed to pushing creative boundaries and delivering innovative solutions that exceed expectations. Let us help you bring your vision to life.",
+    "A film and sound studio for stories that can travel — features, series, and original sound, finished for a festival screen.",
+  mission: "Empower storytellers. Make work that holds on a global screen.",
+  vision: "A house known for authentic stories that move, not volume that fills a slate.",
+  close: "Bring the story. We will build the picture and the sound.",
+  location: "Commissions worldwide",
+  emailLabel: "Write the studio",
 };
+
+export const formats = ["Feature", "Short", "Television", "Sound", "Digital", "Training"];
 
 export const values = [
   {
     title: "Authenticity",
     icon: "heart" as const,
-    body: "We honor and celebrate widespread, diverse narratives and cultural heritage.",
+    body: "Honor the culture in the frame. No borrowed voices.",
   },
   {
     title: "Collaboration",
     icon: "share-2" as const,
-    body: "We work closely with local talent and international partners to foster a collaborative environment.",
+    body: "Local talent. International partners. One standard.",
   },
   {
     title: "Innovation",
     icon: "zap" as const,
-    body: "We embrace creativity and utilize cutting-edge technology to push creative boundaries.",
+    body: "New tools, old craft. The cut still has to land.",
   },
   {
     title: "Community",
     icon: "home" as const,
-    body: "We are committed to supporting community development through storytelling and training initiatives.",
+    body: "Productions and training that leave a bench behind.",
   },
   {
     title: "Excellence",
     icon: "award" as const,
-    body: "We strive for the highest standards in every project, delivering exceptional quality.",
+    body: "Festival screen or phone. Same finish.",
   },
 ];
 
 export const goals = [
-  "Produce at least two feature films and three short films annually, showcasing diverse African stories.",
-  "Establish a mentorship program for emerging filmmakers, actors, artistes and sound designers.",
-  "Partner with international distributors to ensure global reach for our content.",
-  "Create educational workshops and training programs focused on film production and storytelling.",
-  "Increase the representation of African-made content on global streaming platforms and film festivals.",
+  "Two features and three shorts a year, built from original stories.",
+  "A mentorship bench for filmmakers, actors, artistes, and sound designers.",
+  "International distributors so the work can leave home.",
+  "Workshops in picture, sound, and how a film actually travels.",
+  "Studio-made work on festival slates and global platforms.",
 ];
 
 export const services = [
@@ -54,70 +55,49 @@ export const services = [
     title: "Concept development",
     icon: "edit-3" as const,
     image: "/media/script.jpg",
-    summary:
-      "From first spark to a production-ready story document: positioning, world, and a story that can travel.",
-    points: [
-      "Story architecture",
-      "Audience and market framing",
-      "Series and feature documents",
-      "Treatment development",
-    ],
+    summary: "From first spark to a production-ready story document: positioning, world, and a story that can travel.",
+    points: ["Story architecture", "Audience and market framing", "Series and feature documents", "Treatment development"],
   },
   {
     slug: "script",
     title: "Scriptwriting",
     icon: "book-open" as const,
     image: "/media/clapper.jpg",
-    summary:
-      "Scripts written with cultural precision and cinematic pace, ready for directors, talent, and financiers.",
-    points: [
-      "Feature and short screenplays",
-      "Episode outlines",
-      "Dialogue polish",
-      "Script coverage",
-    ],
+    summary: "Scripts written with cultural precision and cinematic pace, ready for directors, talent, and financiers.",
+    points: ["Feature and short screenplays", "Episode outlines", "Dialogue polish", "Script coverage"],
   },
   {
     slug: "filming",
     title: "Filming",
     icon: "video" as const,
     image: "/media/film.jpg",
+    summary: "Full production units for any scale, with cinematography that holds on a festival screen and a phone.",
+    points: ["Director of photography", "Location and studio", "Talent and crew", "Production management"],
+  },
+  {
+    slug: "wardrobe",
+    title: "Wardrobe",
+    icon: "wardrobe" as const,
+    image: "/media/portrait.jpg",
     summary:
-      "Full production units for any scale, with cinematography that holds on a festival screen and a phone.",
-    points: [
-      "Director of photography",
-      "Location and studio",
-      "Talent and crew",
-      "Production management",
-    ],
+      "Costume and character dressing from first look to set — period, contemporary, and designed pieces that hold in close-up.",
+    points: ["Character boards", "Costume design", "On-set continuity", "Aging and breakdown"],
   },
   {
     slug: "editing",
     title: "Editing",
     icon: "film" as const,
     image: "/media/edit.jpg",
-    summary:
-      "Picture editorial that protects performance, rhythm, and the cut the story actually needs.",
-    points: [
-      "Offline and online",
-      "Color finishing",
-      "Titles and graphics",
-      "Delivery masters",
-    ],
+    summary: "Picture editorial that protects performance, rhythm, and the cut the story actually needs.",
+    points: ["Offline and online", "Color finishing", "Titles and graphics", "Delivery masters"],
   },
   {
     slug: "sound",
     title: "Sound design",
     icon: "volume-2" as const,
     image: "/media/sound.jpg",
-    summary:
-      "Sound as storytelling: location capture, design, score collaboration, and mix for cinema or streaming.",
-    points: [
-      "Production sound",
-      "Design and Foley",
-      "Music supervision",
-      "Theatrical and broadcast mix",
-    ],
+    summary: "Sound as storytelling: location capture, design, score collaboration, and mix for cinema or streaming.",
+    points: ["Production sound", "Design and Foley", "Music supervision", "Theatrical and broadcast mix"],
   },
 ];
 
@@ -126,37 +106,45 @@ export const work = [
     slug: "feature-cinema",
     title: "Feature cinema",
     type: "Feature",
-    year: "Slate",
+    year: "In development",
     image: "/media/work-1.jpg",
-    logline:
-      "Long-form African stories built for festivals, theatrical windows, and global streaming.",
+    logline: "Long-form stories built for festivals, theatrical windows, and global streaming.",
+    scope: "Festival · theatrical · streaming",
+    credits: ["Story", "Picture", "Sound"],
+    gallery: ["/media/work-1.jpg", "/media/set.jpg", "/media/lens.jpg"],
   },
   {
     slug: "short-form",
     title: "Short form",
     type: "Short",
-    year: "Slate",
+    year: "In development",
     image: "/media/work-2.jpg",
-    logline:
-      "Concentrated films and artist commissions that travel the festival circuit with force.",
+    logline: "Concentrated films and artist commissions that travel the festival circuit with force.",
+    scope: "Festival · artist commission",
+    credits: ["Direction", "Picture", "Sound"],
+    gallery: ["/media/work-2.jpg", "/media/film.jpg", "/media/portrait.jpg"],
   },
   {
     slug: "television",
     title: "Television",
     type: "Television",
-    year: "Slate",
+    year: "In development",
     image: "/media/work-3.jpg",
-    logline:
-      "Series worlds with the patience of cinema and the pulse of contemporary television.",
+    logline: "Series worlds with the patience of cinema and the pulse of contemporary television.",
+    scope: "Series · limited series",
+    credits: ["Writers room", "Picture", "Sound"],
+    gallery: ["/media/work-3.jpg", "/media/crowd.jpg", "/media/night.jpg"],
   },
   {
     slug: "digital",
     title: "Digital originals",
     type: "Digital",
-    year: "Slate",
+    year: "In development",
     image: "/media/work-4.jpg",
-    logline:
-      "Premium digital work for platforms that still demand craft, not content mills.",
+    logline: "Premium digital work for platforms that still demand craft, not content mills.",
+    scope: "Platform · branded · original",
+    credits: ["Concept", "Picture", "Finish"],
+    gallery: ["/media/work-4.jpg", "/media/edit.jpg", "/media/hero.jpg"],
   },
   {
     slug: "sound-worlds",
@@ -164,8 +152,10 @@ export const work = [
     type: "Sound",
     year: "Studio",
     image: "/media/work-5.jpg",
-    logline:
-      "Original sound design and mix for picture, installations, and artist projects.",
+    logline: "Original sound design and mix for picture, installations, and artist projects.",
+    scope: "Cinema · installation · artist",
+    credits: ["Design", "Foley", "Mix"],
+    gallery: ["/media/work-5.jpg", "/media/sound.jpg", "/media/culture.jpg"],
   },
   {
     slug: "studio-language",
@@ -173,9 +163,18 @@ export const work = [
     type: "In house",
     year: "Ongoing",
     image: "/media/work-6.jpg",
-    logline:
-      "The visual and sonic grammar we bring to every collaboration, from first look to delivery.",
+    logline: "The visual and sonic grammar we bring to every collaboration, from first look to delivery.",
+    scope: "House style · finishing",
+    credits: ["Grade", "Sound", "Delivery"],
+    gallery: ["/media/work-6.jpg", "/media/about.jpg", "/media/workshop.jpg"],
   },
+];
+
+export const socials = [
+  { name: "kick" as const, href: "https://kick.com", label: "Kick" },
+  { name: "instagram" as const, href: "https://instagram.com", label: "Instagram" },
+  { name: "youtube" as const, href: "https://youtube.com", label: "YouTube" },
+  { name: "linkedin" as const, href: "https://linkedin.com", label: "LinkedIn" },
 ];
 
 export const nav = [

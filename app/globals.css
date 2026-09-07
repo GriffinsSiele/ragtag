@@ -3,6 +3,7 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-space), ui-monospace, monospace;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --color-void: #050505;
   --color-ink: #14110e;
   --color-paper: #f4efe6;
@@ -50,9 +51,10 @@ body {
 }
 
 .display {
+  font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
+  letter-spacing: -0.03em;
+  line-height: 0.94;
 }
 
 .pill {
@@ -170,7 +172,7 @@ body {
 
 .vignette {
   background:
-    linear-gradient(180deg, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.08) 38%, rgba(5, 5, 5, 0.82) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.28) 0%, rgba(5, 5, 5, 0.08) 42%, rgba(5, 5, 5, 0.88) 100%),
     radial-gradient(120% 80% at 50% 0%, transparent 40%, rgba(5, 5, 5, 0.55) 100%);
 }
 
@@ -184,10 +186,13 @@ body {
   animation: preload-out 0.9s var(--ease-luxe) 1.7s forwards;
 }
 
-.preloader img {
-  width: min(320px, 72vw);
-  mix-blend-mode: screen;
+.preloader .logo-lockup {
   animation: logo-in 1.2s var(--ease-luxe) both;
+}
+
+.preloader img {
+  width: min(280px, 64vw);
+  height: auto;
 }
 
 @keyframes logo-in {
@@ -284,6 +289,7 @@ select:focus {
   .hero-ken,
   .marquee-track,
   .preloader,
+  .preloader .logo-lockup,
   .preloader img,
   .reveal,
   .hero-rise,
